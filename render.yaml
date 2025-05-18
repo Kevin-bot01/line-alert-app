@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: line-alert
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: LINE_TOKEN
+        value: WTbL3zxrHAe1zd9bMMFO9RsaauYb+h6YBdMPs6TBflGGJaMZrbfMYlPXtGxOz4nXCT2/rBZdfCOshP/YS9x1OXRLXwvv8QLlD+GIbHYoGeEiaX1Pc0Ui0Gq7xi9q0KbJbcapLX27bPOBtsM3oV4D3QdB04t89/1O/w1cDnyilFU=
+      - key: LINE_USER_ID
+        value: U119fc7cc3f548a32ee755e22d17f3a97
+      - key: THINGSPEAK_URL
+        value: https://api.thingspeak.com/channels/2958375/feeds/last.json?api_key=345QZ2LSOVNW1UO3
