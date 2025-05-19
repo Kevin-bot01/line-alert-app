@@ -36,4 +36,5 @@ def home():
     return "LINE Alert Webhook Running", 200
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))  # 讀取 Render 指定的 PORT
+    app.run(host="0.0.0.0", port=port)        # 綁定 0.0.0.0 才能開放外部連線
